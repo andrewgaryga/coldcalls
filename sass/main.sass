@@ -39,30 +39,56 @@ body textarea:required:valid
 .hidden
 	display: none
 
-
 .navbar-default
 	border-bottom-color: orange
+	background-color: #fff
+	span.dotted
+		text-decoration: underline
+	.zero_padding
+		padding-top: 4px
+		padding-bottom: 0
+		margin-top: 0
+		margin-bottom: 0
+
+.navbar-brand
+	font-weight: bold
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover 
+	color: #333
+	background-color: transparent
+
+.triangle
+	position: absolute
+	top: 8px
+	left: 134px
+	width: 0
+	height: 0
+	border-style: solid
+	border-width: 0 8px 12px 8px
+	border-color: transparent transparent #ffaa00 transparent
 
 header 
 	margin-top: -50px /* navbar overlap! */
-	padding-bottom: 50px
+	padding-bottom: 5px
 	text-align: center
 	color: #000
 	background: url(../img/intro-bg.png) no-repeat center center
 	background-size: cover
 	.intro_message 
 		position: relative
-		padding-top: 10%
-		padding-bottom: 10%
+		padding-top: 4%
+		padding-bottom: 4%
 	.intro_message 
 		h1 
 			margin: 0
 			// text-shadow: 2px 2px 3px rgba(0,0,0,0.6)
 			font-size: 4em
 			font-weight: bold
-		h3 
+			line-height: 1em
+		h2 
 			// text-shadow: 2px 2px 3px rgba(0,0,0,0.6)
 			font-weight: bold
+			font-size: 2.7em
 	.btn
 		border-radius: 0
 		text-transform: uppercase
@@ -74,7 +100,7 @@ header
 	.btn-circle 
 		width: 40px
 		height: 40px
-		margin-top: 15px
+		margin-top: 2%
 		padding: 0px 9.9px
 		border: 2px solid orange
 		border-radius: 100%!important
@@ -90,10 +116,24 @@ header
 		background: rgba(255,255,255,.1)
 	p.main_text 
 		font-size: 1.4em
+		margin-top: 2%
+		margin-bottom: 1%
 	p.head_orange
 		color: orange
-		font-size: 1.5em
+		font-size: 1.8em
 		font-weight: bold
+		margin-bottom: 2%
+	.form-control
+		border: 3px solid #7B7A7A
+		text-transform: uppercase
+		padding: 6px 20px
+	.btn-warning
+		border-radius: 4px
+		padding: 6px 20px
+	.form-group
+		margin-right: 1.2%
+	.form-inline
+		margin-bottom: 1.7%
    
 .btn-circle i.animated 
 	-webkit-transition-property: -webkit-transform
@@ -137,20 +177,56 @@ header
 
 #services 
 	background-color: #f5f5f5
+	h2, h3
+		font-weight: bold
+	h2
+		margin-bottom: 0.2%
+	h3
+		margin-top: 0
 	ul 
 		text-align: left 
-		padding-left: 34% 
+		padding-left: 0 
+		margin-left: 5%
 	i 
 		color: orange
+	hr 
+		border-color: #000
+		margin: 25px auto 30px
+		padding: 0px
+		border-width: 3px 0px 0px
+		border-style: solid none none
+		border-color: -moz-use-text-color
+		-moz-border-top-colors: none
+		-moz-border-right-colors: none
+		-moz-border-bottom-colors: none
+		-moz-border-left-colors: none
+		border-image: none
+		text-align: center
+	.fa 
+		vertical-align: bottom
 	.intro_services
-		padding-top: 5%
-		padding-bottom: 5%
+		padding-top: 3%
+		padding-bottom: 3%
+	.service_heading
+		font-weight: bold
+	.benefits
+		font-size: 1.8em
+		font-weight: bold
 
 #headache 
 	color: #fff
 	background: url(../img/headache-bg.jpg) no-repeat center center
 	text-align: center
 	position: relative
+	.intro_headache
+		margin-top: 2%
+		margin-bottom: 3%
+	.wrap
+		margin-left: 4%
+		margin-right: 4%
+	.yellow
+		background-color: yellow
+		color: black
 	.shadow
 		background: -webkit-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1))
 		background: -o-linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 1)) /* For Opera 11.1 to 12.0 */
@@ -161,5 +237,104 @@ header
 		position: absolute
 		top: 0
 		left: 0
-	.panel 
-		background-color: transparent
+	.headache_panel
+		margin: 2% 5%
+	h2, h4 
+		margin-left: 10%
+		margin-right: 10%
+		font-weight: bold
+	h2
+		// font-weight: bold
+		word-spacing: 0.2em
+		letter-spacing: 0.03em
+	h4
+		font-size: 1.5em
+	.panel-default
+		margin-left: 10%
+		margin-right: 10%
+	.extra_margin
+		width: 100%
+		padding-right: 12%
+		font-weight: bold
+		padding-left: 5%
+		.fa 
+			vertical-align: top
+		p
+			// display: inline-block
+			// width: 80%
+			font-size: 1.2em
+		i 
+			// width: 20%
+			float: left
+			margin-right: 6%
+			height: 100%
+			margin-bottom: 20%
+	.headache_border 
+		border: 2px solid orange
+		text-align: left 
+		padding: 0 5% 4% 5%
+	.fa-orange
+		color: orange
+	.help
+		font-size: 2em
+		font-weight: bold
+		margin-bottom: 2%
+
+.arrow_box 
+	position: relative
+	background: #transparent
+	border: 1px solid #fff
+	border-radius: 5px
+	padding: 10px
+
+.arrow_box:after, .arrow_box:before 
+	bottom: 100%
+	left: 50%
+	border: solid transparent
+	content: " "
+	height: 0
+	width: 0
+	position: absolute
+	pointer-events: none
+
+.arrow_box:after 
+	border-color: rgba(0, 0, 0, 0)
+	border-bottom-color: #transparent
+	border-width: 10px
+	margin-left: -10px
+
+.arrow_box:before 
+	border-color: rgba(255, 255, 255, 0)
+	border-bottom-color: #fff
+	border-width: 11px
+	margin-left: -11px
+
+// from services
+.arrow_box_bottom 
+	position: relative
+	background: #transparent
+	border: 1px solid #3F3F3F
+	margin-bottom: 2.7%
+	margin-top: 2.2%
+
+.arrow_box_bottom:after, .arrow_box_bottom:before 
+	top: 100%
+	left: 50%
+	border: solid transparent
+	content: " "
+	height: 0
+	width: 0
+	position: absolute
+	pointer-events: none
+
+.arrow_box_bottom:after 
+	border-color: rgba(0, 0, 0, 0)
+	border-top-color: #transparent
+	border-width: 4px
+	margin-left: -4px
+
+.arrow_box_bottom:before 
+	border-color: rgba(0, 0, 0, 0)
+	border-top-color: #000000
+	border-width: 10px
+	margin-left: -10px
